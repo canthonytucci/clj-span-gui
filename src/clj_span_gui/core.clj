@@ -1,5 +1,5 @@
 (ns clj-span-gui.core
-  (:import (javax.swing JFrame JLabel JTextField JButton)
+  (:import (javax.swing JFrame JLabel JTextField JButton ButtonGroup JRadioButton)
 	   (java.awt.event ActionListener)
 	   (java.awt GridLayout)))
 
@@ -59,7 +59,7 @@
 
 
 	
-	engage-button (new JButton "Engage")])
+	engage-button (new JButton "Engage")]
 
   (doto sink-type-buttongroup
 	  (.add sink-absolute-button)
@@ -74,7 +74,7 @@
 	  (.add benefit-non-button))
 
     (doto flow-model-buttongroup
-	  (.add flow-lineofsign-button)
+	  (.add flow-lineofsight-button)
 	  (.add flow-proximity-button)
 	  (.add flow-carbon-button)
 	  (.add flow-sediment-button))
@@ -115,8 +115,8 @@
     (.add use-relative-button)
 
     (.add benefit-type-label)
-    (.add benefit-type-rival-button)
-    (.add benefit-type-non-button)
+    (.add benefit-rival-button)
+    (.add benefit-non-button)
 
     (.add flow-model-label)
     (.add flow-lineofsight-button)
@@ -126,6 +126,6 @@
 
     (.add engage-button)
 
-      (.setVisible true)))
+      (.setVisible true))))
 
 (init)
